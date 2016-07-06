@@ -24,9 +24,28 @@ class Tamagotchi
   end
 
   define_method(:is_alive?) do
-    if self.food_level() > 0
+    if self.food_level() > 0 || self.activity_level > 0 || self.sleep_level > 0
       true
+    else
+      false
     end
   end
+
+  define_method(:feed) do
+    @food_level += 1
+  end
+
+  define_method(:time_passes) do
+    @food_level -= 1
+  end
+
+  define_method(:play) do
+    @activity_level += 1
+  end
+
+  define_method(:ignore) do
+    @activity_level -= 1
+  end
+
 
 end
