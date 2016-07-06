@@ -23,4 +23,10 @@ class Tamagotchi
     @activity_level
   end
 
+  define_method(:is_alive?) do
+    if self.food_level() > 0
+      true
+    end
+  end
+
 end

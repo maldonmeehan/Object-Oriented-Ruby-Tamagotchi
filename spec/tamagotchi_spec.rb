@@ -12,4 +12,11 @@ describe(Tamagotchi) do
     end
   end
 
+    describe("#is_alive?") do
+      it("is alive if the food level is above 0") do
+        my_pet = Tamagotchi.new("lil dragon")
+        expect(my_pet.is_alive?()).to(eq(true))
+      end
+    end
+
 end
