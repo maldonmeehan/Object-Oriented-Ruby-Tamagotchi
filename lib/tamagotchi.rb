@@ -23,6 +23,14 @@ class Tamagotchi
     @activity_level
   end
 
+  define_singleton_method(:my_pet)do
+    @@my_pet
+  end
+
+  define_singleton_method(:save)do
+    @@my_pet.push(self)
+  end
+
   define_method(:is_alive?) do
     if self.food_level() > 0 || self.activity_level > 0 || self.sleep_level > 0
       true
