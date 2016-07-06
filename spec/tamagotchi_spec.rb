@@ -67,4 +67,12 @@ describe(Tamagotchi) do
       end
     end
 
+    describe("#wake") do
+      it ("decreases the sleep level by 1") do
+        my_pet = Tamagotchi.new("lil dragon")
+        my_pet.wake()
+        expect(my_pet.sleep_level()).to(eq(9))
+      end
+    end
+
 end
