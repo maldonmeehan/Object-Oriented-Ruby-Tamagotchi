@@ -1,5 +1,9 @@
 <h1>Hello <%= @name %>!</h1>
 
-<button id="feed" type="click">Feed</button>
-<button id="sleep" type="click">Sleep</button>
-<button id="play" type="click">Play</button>
+<button id="feed" name="feed" type="click" class ="btn btn-success">Feed</button>
+<button id="sleep" type="click" class ="btn btn-info">Sleep</button>
+<button id="play" type="click" class ="btn btn-warning">Play</button>
+
+<p>Food: <%= @food_score %></p>
+<p>Sleep: <%= @sleep_score %></p>
+<p>Play: <%= @activity_score %></p>
