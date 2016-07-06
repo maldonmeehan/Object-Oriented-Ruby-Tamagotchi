@@ -47,5 +47,8 @@ class Tamagotchi
     @activity_level -= 1
   end
 
+  define_method(:sleep) do
+    @sleep_level += 1
+  end
 
 end
